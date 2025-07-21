@@ -1,0 +1,79 @@
+.svg-item {
+  border-bottom: 1px solid #c9c9c9;
+  margin-bottom: 20px;
+}
+
+pre {
+  background-color: #efefef;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.square rect:hover {
+  animation: background-change;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes background-change {
+  50% {
+    fill: #FAC1FA;
+    stroke: #9BBFF8;
+  }
+}
+
+.rectangle rect:hover {
+  animation: turn;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+@keyframes turn {
+  0% {
+    x: 100;
+    y: 5;
+  }
+  25% {
+    x: 100;
+    y: -295;
+    transform: rotate(90deg);
+  }
+  50% {
+    x: -200;
+    y: -295;
+    transform: rotate(180deg);
+  }
+  75% {
+    x: -200;
+    y: 5;
+    transform: rotate(270deg);
+  }
+  100% {
+    x: 100;
+    y: 5;
+    transform: rotate(360deg);
+  }
+}
+
+.circle circle:hover {
+  animation: scale;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes scale {
+  50% {
+    r: 20;
+    fill: #FCFA82;
+  }
+}
+
+.oval ellipse:hover {
+  animation: coning;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes coning {
+  50% {
+    rx: 75;
+    ry: 145;
+    fill: #292C42;
+  }
+}/*# sourceMappingURL=style.css.map */

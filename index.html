@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home-work-13</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center mb-5 mt-5">Домашнє завдання №13. Мистецтво SVG: фігури та анімація</h1>
+        <div class="svg-item row">
+            <h4 class="text-center">Квадрат</h4>
+            <div class="col-md-3">
+                <svg width="300" height="300" class="square">
+                    <rect x="25" y="25" width="250" height="250" fill="#9BBFF8" stroke="#FAC1FA" stroke-width="5" />
+                </svg>
+            </div>
+            <div class="col-md-9">
+                <p><strong>HTML:</strong></p>
+                <pre>&lt;svg width="300" height="300" class="square">
+    &lt;rect x="25" y="25" width="220" height="220" fill="#9BBFF8" stroke="#FAC1FA" stroke-width="30"&gt;
+/svg&gt;</pre><br>
+                <p><strong>CSS анімація (працює при наведенні):</strong></p>
+                <pre>
+.square rect:hover {
+  animation: background-change;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes background-change {
+  50% {
+    fill: #FAC1FA;
+    stroke: #9BBFF8;
+  }
+}</pre>
+            </div>
+        </div>
+        <div class="svg-item row">
+            <h4 class="text-center">Прямокутник</h4>
+            <div class="col-md-3">
+                <svg width="300" height="300" class="rectangle">
+                    <rect x="100" y="5" width="100" height="290" fill="#7FA658" stroke="#e3655b" stroke-width="5" />
+                </svg>
+            </div>
+            <div class="col-md-9">
+                <p><strong>HTML:</strong></p>
+                <pre>&lt;svg width="300" height="300" class="rectangle">
+    &lt;rect x="100" y="5" width="100" height="290" fill="#7FA658" stroke="#e3655b" stroke-width="5"&gt;
+/svg&gt;</pre><br>
+                <p><strong>CSS анімація (працює при наведенні на центр фігури):</strong></p>
+                <pre>
+.rectangle rect:hover {
+  animation: turn;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+@keyframes turn {
+  0% {
+    x: 100;
+    y: 5;
+  }
+  25% {
+    x: 100;
+    y: -295;
+    transform: rotate(90deg);
+  }
+  50% {
+    x: -200;
+    y: -295;
+    transform: rotate(180deg);
+  }
+  75% {
+    x: -200;
+    y: 5;
+    transform: rotate(270deg);
+  }
+  100% {
+    x: 100;
+    y: 5;
+    transform: rotate(360deg);
+  }
+}</pre>
+            </div>
+        </div>
+        <div class="svg-item row">
+            <h4 class="text-center">Коло</h4>
+            <div class="col-md-3">
+                <svg width="300" height="300" class="circle">
+                    <circle cx="150" cy="150" r="145" stroke="#FDABAB" stroke-width="5" fill="#C6F8BD" />
+                </svg>
+            </div>
+            <div class="col-md-9">
+                <p><strong>HTML:</strong></p>
+                <pre>&lt;svg width="300" height="300" class="circle">
+    &lt;circle cx="150" cy="150" r="145" stroke="#FDABAB" stroke-width="5" fill="#C6F8BD"&gt;
+/svg&gt;</pre><br>
+                <p><strong>CSS анімація (працює при наведенні):</strong></p>
+                <pre>
+.circle circle:hover {
+  animation: scale;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes scale {
+  50% {
+    r: 20;
+    fill: #FCFA82;
+  }
+}</pre>
+            </div>
+        </div>
+        <div class="svg-item row">
+            <h4 class="text-center">Еліпс</h4>
+            <div class="col-md-3">
+                <svg width="300" height="300" class="oval">
+                    <ellipse cx="150" cy="150" rx="145" ry="75" fill="#1B9688" stroke="#E44754" stroke-width="5" />
+                </svg>
+            </div>
+            <div class="col-md-9">
+                <p><strong>HTML:</strong></p>
+                <pre>&lt;svg width="300" height="300" class="square">
+    &lt;ellipse cx="150" cy="150" rx="145" ry="75" fill="#1B9688" stroke="#E44754" stroke-width="5"&gt;
+/svg&gt;</pre><br>
+                <p><strong>CSS анімація (працює при наведенні):</strong></p>
+                <pre>
+.oval ellipse:hover {
+  animation: coning;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes coning {
+  50% {
+    rx: 75;
+    ry: 145;
+    fill: #292C42;
+  }
+}</pre>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
